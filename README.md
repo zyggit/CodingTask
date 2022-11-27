@@ -82,7 +82,7 @@ Each business generates the following data and the data model includes
 
 
 ## UML-TimeLine
-[TimeLine](https://github.com/zyggit/CodingTask/blob/main/Document/UML-Process.png)
+![TimeLine](https://github.com/zyggit/CodingTask/blob/main/Document/UML-Process.png)
 
 
 
