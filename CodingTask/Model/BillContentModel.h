@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDecimalNumber *surcharges;
 @property (nonatomic, strong) NSDecimalNumber *discounts;
 @property (nonatomic,   copy) NSString *groupId;
-@property (nonatomic, assign) NSInteger orderId;
 
 @end
 

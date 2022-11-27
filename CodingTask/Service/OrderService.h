@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OrderService : NSObject
 
+/// Pay Bill
+/// @param group Enter the restaurant dining group
+/// @param paid Payment amount
 - (NSString *)payBillWithGroup:(NSInteger)group paid:(NSNumber *)paid;
 
 @end

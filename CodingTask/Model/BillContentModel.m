@@ -14,7 +14,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self=[super init];
     if(self) {
-        self.orderId = [coder decodeIntegerForKey:@"orderId"];
+        self.groupId = [coder decodeObjectForKey:@"groupId"];
     }
     
     return  self;
@@ -22,7 +22,8 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
-    [coder encodeInteger:self.orderId forKey:@"orderId"];
+    [coder encodeObject:self.groupId forKey:@"groupId"];
+    //TODO:encode props.
 }
 
 - (NSString *)description {

@@ -309,11 +309,5 @@
     return model;
 }
 
-+ (void)calculateBill:(OrderModel *)order {
-  
-    
-}
-
-
 
 @end
