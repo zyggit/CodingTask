@@ -90,7 +90,7 @@ Each business generates the following data and the data model includes
 
 
 ## UML-Class
-![alt Class](./UML-Class.jpeg))
+![alt Class](https://github.com/zyggit/CodingTask/blob/main/Document/UML-Class.jpeg))
 
 
 
