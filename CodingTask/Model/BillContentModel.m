@@ -6,6 +6,7 @@
 //
 
 #import "BillContentModel.h"
+#import "CodeTaskUtil.h"
 
 @implementation BillContentModel
 
@@ -25,15 +26,15 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"\n---------Invoice---------- \n #group identification   %@\n #taxes                $%@ \n #surcharges        $%@\n #discounts          $%@\n\n #need paid            $%@\n #paid                   $%@\n #returned             $%@\n #remaining            $%@",
+    return [NSString stringWithFormat:@"\n---------Invoice---------- \n #group identification   %@\n #taxes  %@ \n #surcharges %@\n #discounts   %@\n\n #need paid   %@\n #paid           %@\n #returned     %@\n #remaining   %@",
             self.groupId,
-            self.taxes,
-            self.surcharges,
-            self.discounts,
-            self.shouldPayAmount,
-            self.paidAmount,
-            self.returnedAmount,
-            self.remainingAmount
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.taxes.doubleValue] formateType:NumberTypeTaxes],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.surcharges.doubleValue] formateType:NumberTypePrice],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.discounts.doubleValue] formateType:NumberTypePrice],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.shouldPayAmount.doubleValue] formateType:NumberTypePrice],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.paidAmount.doubleValue] formateType:NumberTypePrice],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.returnedAmount.doubleValue] formateType:NumberTypePrice],
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.remainingAmount.doubleValue] formateType:NumberTypePrice]
             ];
 }
 

@@ -37,6 +37,38 @@
     return numberString;
 }
 
++ (NSString *)formateNumber:(NSNumber *)number formateType:(NumberType)type {
+    NSNumberFormatter *numberFormatter =[[NSNumberFormatter alloc]init];
+    switch (type) {
+        case NumberTypePrice:
+        {
+            numberFormatter.numberStyle = NSNumberFormatterCurrencyAccountingStyle;
+            numberFormatter.minimumFractionDigits = 1;
+            numberFormatter.maximumFractionDigits = 3;
+            NSString *prefix = [NSString stringWithFormat:@"-%@",numberFormatter.currencySymbol];
+            numberFormatter.negativePrefix = prefix;
+            numberFormatter.negativeSuffix = @"";
+        }
+            break;
+        case NumberTypeTaxes:
+        {
+            numberFormatter.numberStyle = NSNumberFormatterPercentStyle;
+            numberFormatter.minimumFractionDigits = 1;
+            numberFormatter.maximumFractionDigits = 3;
+        }
+            break;
+            
+        default:
+        {
+            
+        }
+            break;
+    }
+    
+    numberFormatter.formatWidth = 20;
+    numberFormatter.locale = [NSLocale currentLocale];
+    return [numberFormatter stringFromNumber:number];
+}
 
 
 @end

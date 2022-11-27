@@ -6,6 +6,7 @@
 //
 
 #import "OrderModel.h"
+#import "CodeTaskUtil.h"
 
 @implementation OrderModel
 
@@ -29,7 +30,8 @@
     
     double totalPrice = 0;
     for (OrderItemsModel *model in self.orderItems) {
-        [orderGoods appendFormat:@"     - %@ x %@ * %@\n",model.itemCount,model.itemPrice,model.itemName];
+        NSString *price = [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:model.itemPrice.doubleValue] formateType:NumberTypePrice];
+        [orderGoods appendFormat:@"     - No.%@ %@     %@\n",model.itemCount,price,model.itemName];
         totalGoodsCount += model.itemCount.integerValue;
         totalPrice += model.itemPrice.doubleValue;
     }
@@ -37,12 +39,12 @@
     
     
     
-    return [NSString stringWithFormat:@"\n---------Bill---------- \n #OrderGroup   No.%ld\n #OrderPerson  %ld \n #OrderGoods   %ld\n%@\n\n#OrderPrice   $%@\n",
+    return [NSString stringWithFormat:@"\n---------Bill---------- \n #OrderGroup   No.%ld\n #OrderPerson  %ld \n #OrderGoods   NO.%ld\n%@\n\n#OrderPrice  %@\n",
             (long)self.orderGroup,
             (long)self.orderPersons.count,
             totalGoodsCount,
             orderGoods,
-            self.paymentModel.shouldPayAmount
+            [CodeTaskUtil formateNumber:[NSNumber numberWithDouble:self.paymentModel.shouldPayAmount.doubleValue] formateType:NumberTypePrice]
             ];
 }
 

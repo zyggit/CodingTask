@@ -80,8 +80,9 @@
                                                     paymentModel:groupPayment1];
     
     // group bill
+    NSString *groupString = [NSString stringWithFormat:@"Group %ld identification",(long)group];
     BillContentModel *billModel1 = [OrderHandler buildBillContentWithOrder:orderModel1
-                                                                   groupId:@"Group 1 identification"
+                                                                   groupId:groupString
                                                                 orderGroup:group];
     
     NSString *billString = [NSString stringWithFormat:@"%@\n%@",[orderModel1 description],[billModel1 description]];
@@ -117,8 +118,9 @@
                                                     paymentModel:groupPayment];
     
     // group bill
+    NSString *groupString = [NSString stringWithFormat:@"Group %ld identification",(long)group];
     BillContentModel *billModel = [OrderHandler buildBillContentWithOrder:orderModel
-                                                                   groupId:@"Group 2 identification"
+                                                                   groupId:groupString
                                                                 orderGroup:group];
     
     NSString *billString = [NSString stringWithFormat:@"%@\n%@",[orderModel description],[billModel description]];
@@ -154,8 +156,9 @@
                                                     paymentModel:groupPayment];
     
     // group bill
+    NSString *groupString = [NSString stringWithFormat:@"Group %ld identification",(long)group];
     BillContentModel *billModel = [OrderHandler buildBillContentWithOrder:orderModel
-                                                                   groupId:@"Group 3 identification"
+                                                                   groupId:groupString
                                                                 orderGroup:group];
     
     NSString *billString = [NSString stringWithFormat:@"%@\n%@",[orderModel description],[billModel description]];

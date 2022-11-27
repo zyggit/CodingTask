@@ -26,6 +26,8 @@
 		0205B95029321D280099BDF3 /* OrderPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0205B94F29321D280099BDF3 /* OrderPersonModel.m */; };
 		0205B953293220840099BDF3 /* BillContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0205B952293220840099BDF3 /* BillContentModel.m */; };
 		0205B956293244600099BDF3 /* CodeTaskUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0205B955293244600099BDF3 /* CodeTaskUtil.m */; };
+		02437D502932FF5B00560305 /* UML-Class.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02437D4E2932FF5A00560305 /* UML-Class.jpeg */; };
+		02437D512932FF5B00560305 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02437D4F2932FF5A00560305 /* README.md */; };
 		02F4BD6A2932E38600491AB3 /* ItemLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4BD692932E38600491AB3 /* ItemLocationModel.m */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +66,6 @@
 		0205B9192931D36B0099BDF3 /* CodingTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0205B91D2931D36B0099BDF3 /* CodingTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodingTaskUITests.m; sourceTree = "<group>"; };
 		0205B91F2931D36B0099BDF3 /* CodingTaskUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodingTaskUITestsLaunchTests.m; sourceTree = "<group>"; };
-		0205B92F2931DCA50099BDF3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0205B937293217290099BDF3 /* OrderItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderItemsModel.h; sourceTree = "<group>"; };
 		0205B938293217290099BDF3 /* OrderItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderItemsModel.m; sourceTree = "<group>"; };
 		0205B93A293217440099BDF3 /* PaymentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentModel.h; sourceTree = "<group>"; };
@@ -83,6 +84,8 @@
 		0205B952293220840099BDF3 /* BillContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillContentModel.m; sourceTree = "<group>"; };
 		0205B954293244600099BDF3 /* CodeTaskUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeTaskUtil.h; sourceTree = "<group>"; };
 		0205B955293244600099BDF3 /* CodeTaskUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeTaskUtil.m; sourceTree = "<group>"; };
+		02437D4E2932FF5A00560305 /* UML-Class.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "UML-Class.jpeg"; sourceTree = "<group>"; };
+		02437D4F2932FF5A00560305 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		02F4BD682932E38600491AB3 /* ItemLocationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemLocationModel.h; sourceTree = "<group>"; };
 		02F4BD692932E38600491AB3 /* ItemLocationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemLocationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +118,6 @@
 		0205B8EB2931D3690099BDF3 = {
 			isa = PBXGroup;
 			children = (
-				0205B92E2931DC870099BDF3 /* Document */,
 				0205B8F62931D3690099BDF3 /* CodingTask */,
 				0205B9122931D36B0099BDF3 /* CodingTaskTests */,
 				0205B91C2931D36B0099BDF3 /* CodingTaskUITests */,
@@ -136,6 +138,7 @@
 		0205B8F62931D3690099BDF3 /* CodingTask */ = {
 			isa = PBXGroup;
 			children = (
+				02437D4D2932FF5A00560305 /* Document */,
 				0205B9472932177A0099BDF3 /* Service */,
 				0205B943293217650099BDF3 /* Handler */,
 				0205B9302931E3450099BDF3 /* Model */,
@@ -169,15 +172,6 @@
 				0205B91F2931D36B0099BDF3 /* CodingTaskUITestsLaunchTests.m */,
 			);
 			path = CodingTaskUITests;
-			sourceTree = "<group>";
-		};
-		0205B92E2931DC870099BDF3 /* Document */ = {
-			isa = PBXGroup;
-			children = (
-				0205B92F2931DCA50099BDF3 /* README.md */,
-			);
-			name = Document;
-			path = CodingTask/Document;
 			sourceTree = "<group>";
 		};
 		0205B9302931E3450099BDF3 /* Model */ = {
@@ -220,6 +214,15 @@
 			);
 			path = Service;
 			sourceTree = "<group>";
+		};
+		02437D4D2932FF5A00560305 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				02437D4E2932FF5A00560305 /* UML-Class.jpeg */,
+				02437D4F2932FF5A00560305 /* README.md */,
+			);
+			path = Document;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -326,7 +329,9 @@
 			files = (
 				0205B9072931D36B0099BDF3 /* LaunchScreen.storyboard in Resources */,
 				0205B9042931D36B0099BDF3 /* Assets.xcassets in Resources */,
+				02437D512932FF5B00560305 /* README.md in Resources */,
 				0205B9022931D3690099BDF3 /* Main.storyboard in Resources */,
+				02437D502932FF5B00560305 /* UML-Class.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
